@@ -351,3 +351,49 @@ h1, h2, h3, h4 {
   .ac-left ul { text-align: left; display: inline-block; }
   .footer-nav-cols { flex-direction: column; gap: 32px; }
 }
+
+
+/* 2026-11: OrangeShare hero visual renewal (homepage only) */
+/* Keep original HTML headline, lead and CTAs editable; decorative artwork as background. */
+.hero-angled.hero-2026 {
+  color: var(--ink);
+  background-color: #f8f4ee;
+  background-image:
+    linear-gradient(90deg, rgba(250,247,242,0.98) 0%, rgba(250,247,242,0.90) 28%, rgba(250,247,242,0.58) 48%, rgba(250,247,242,0) 70%),
+    url("../images/orangeshare-hero-2026.jpg");
+  background-position: center, center;
+  background-repeat: no-repeat;
+  background-size: cover, cover;
+  padding-top: 94px;
+  padding-bottom: 118px;
+}
+.hero-2026 .hero-grid-pattern, .hero-2026 .hero-orb { display: none; }
+.hero-2026 .hero-grid { display: block; min-height: 390px; }
+.hero-2026 .hero-copy { width: min(100%, 630px); position: relative; z-index: 2; }
+.hero-2026 .hero-line { background: var(--orange); }
+.hero-2026 .hero-en { color: #a05d2d; opacity: 1; }
+.hero-2026 .hero-title { color: var(--ink); }
+.hero-2026 .hero-lead { color: #41414a; opacity: 1; max-width: 590px; }
+.hero-2026 .btn-dark { background: var(--orange); color: var(--white); }
+.hero-2026 .btn-ghost-light { background: rgba(255,255,255,0.76); border: 1px solid rgba(83,65,45,0.22); color: var(--ink); }
+.hero-2026 .hero-bottom-bar { border-top-color: rgba(70,55,38,0.18); color: #615f60; opacity: 1; }
+@media (max-width: 1024px) {
+  .hero-angled.hero-2026 { background-position: center, 56% center; }
+  .hero-2026 .hero-copy { width: min(100%, 580px); }
+}
+@media (max-width: 768px) {
+  .hero-angled.hero-2026 {
+    padding-top: 55px;
+    padding-bottom: 70px;
+    background-image:
+      linear-gradient(180deg, rgba(250,247,242,0.99) 0%, rgba(250,247,242,0.99) 40%, rgba(250,247,242,0.76) 63%, rgba(250,247,242,0.10) 100%),
+      url("../images/orangeshare-hero-2026.jpg");
+    background-position: center, 60% bottom;
+    background-size: cover, auto 78%;
+  }
+  .hero-2026 .hero-grid { min-height: 580px; }
+  .hero-2026 .hero-copy { width: 100%; }
+  .hero-2026 .hero-title { font-size: clamp(1.8rem, 7vw, 2.55rem); }
+  .hero-2026 .hero-lead { font-size: 0.96rem; line-height: 1.8; }
+  .hero-2026 .hero-bottom-bar { margin-top: 12px; }
+}
