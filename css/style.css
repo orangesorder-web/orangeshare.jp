@@ -397,3 +397,43 @@ h1, h2, h3, h4 {
   .hero-2026 .hero-lead { font-size: 0.96rem; line-height: 1.8; }
   .hero-2026 .hero-bottom-bar { margin-top: 12px; }
 }
+
+/* 2026-11-23: Hero typography, spacing and in-page navigation refinement */
+.hero-2026 .hero-grid { min-height: 405px; }
+.hero-2026 .hero-copy { width: min(100%, 770px); }
+.hero-2026 .hero-title {
+  font-size: clamp(2rem, 4.1vw, 3.4rem);
+  line-height: 1.34;
+  letter-spacing: -0.035em;
+  margin-bottom: 27px;
+  text-wrap: balance;
+}
+.hero-2026 .hero-lead {
+  font-size: 1.17rem;
+  font-weight: 400;
+  line-height: 1.95;
+  letter-spacing: 0.012em;
+  max-width: 710px;
+  margin-bottom: 33px;
+}
+.hero-2026 .hero-actions { gap: 12px; align-items: center; }
+.hero-2026 .hero-actions .btn { padding: 15px 25px; min-height: 54px; }
+.hero-2026 .hero-actions .btn-ghost-light { backdrop-filter: blur(6px); }
+.hero-2026 .hero-bottom-bar { justify-content: flex-end; margin-top: 30px; }
+.hero-2026 .hb-scroll { display: inline-flex; align-items: center; min-height: 40px; }
+@media (min-width: 1025px) and (max-width: 1250px) {
+  .hero-2026 .hero-title { font-size: clamp(2rem, 3.75vw, 3.15rem); }
+  .hero-2026 .hero-copy { width: min(100%, 710px); }
+}
+@media (max-width: 1024px) {
+  .hero-2026 .hero-copy { width: min(100%, 690px); }
+  .hero-2026 .hero-title { font-size: clamp(2rem, 4.8vw, 3.15rem); }
+}
+@media (max-width: 768px) {
+  .hero-2026 .hero-title { font-size: clamp(1.85rem, 6.6vw, 2.75rem); line-height: 1.42; }
+  .hero-2026 .hero-title .nowrap-pc { white-space: normal; }
+  .hero-2026 .hero-lead { font-size: clamp(1rem, 3.6vw, 1.13rem); line-height: 1.9; max-width: 100%; }
+  .hero-2026 .hero-lead br { display: none; }
+  .hero-2026 .hero-actions .btn { padding: 13px 20px; min-height: 49px; font-size: 0.88rem; }
+  .hero-2026 .hero-bottom-bar { margin-top: 18px; }
+}
