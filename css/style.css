@@ -647,3 +647,16 @@ body:not(.page-home) .site-header .brand-symbol {
  #about .offset-media { padding:8px; }
  #about .offset-media img { aspect-ratio:16/10; object-position:65% center; }
 }
+
+/* 2026-11-24: source-traced logo and artwork orientation */
+.brand .brand-lockup { display:block; width:191px; height:auto; max-height:58px; object-fit:contain; flex-shrink:0; }
+body:not(.page-home) .site-header .brand-lockup {
+  filter:brightness(0) saturate(100%) invert(39%) sepia(94%) saturate(4975%) hue-rotate(2deg) brightness(104%) contrast(105%);
+}
+.page-home .site-header .brand-lockup, .site-footer .brand-lockup { filter:none; }
+.site-footer .brand-lockup { width:203px; }
+#about .offset-media-flipped img { transform:scaleX(-1); }
+@media (max-width:768px) {
+  .brand .brand-lockup { width:158px; max-height:49px; }
+  .site-footer .brand-lockup { width:184px; }
+}
