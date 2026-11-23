@@ -681,3 +681,59 @@ body:not(.page-home) .site-header .brand-logotype { filter:brightness(0) !import
   .site-footer .brand-logotype { width:194px; }
   .hero-2026 .hero-brand-disc { width:93%; }
 }
+
+/* 2026-11-24 hero copy, calm scroll cue and editorial sections */
+.hero-2026 .hero-lead {font-weight:600; line-height:1.95; letter-spacing:.015em; font-size:clamp(1.07rem,1.35vw,1.2rem); max-width:750px; margin-bottom:0;}
+.hero-2026 .hero-grid {min-height:440px;}
+.hero-2026 .hero-bottom-bar {margin-top:13px; padding-top:0; border:0; justify-content:center; }
+.hero-scroll-cue { display:flex; flex-direction:column; align-items:center; gap:8px; position:relative; z-index:2; color:#fff; }
+.hero-scroll-label { font:700 .7rem 'Plus Jakarta Sans',sans-serif; letter-spacing:.19em; opacity:.83; }
+.hero-scroll-circle { width:44px;height:44px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.63);border-radius:50%;background:rgba(255,255,255,.11);font-size:1.4rem;animation:orangeScrollPulse 2.3s ease-in-out infinite; }
+@keyframes orangeScrollPulse {0%,100%{transform:translateY(0);box-shadow:0 0 0 0 rgba(255,255,255,.20)}48%{transform:translateY(7px);box-shadow:0 0 0 9px rgba(255,255,255,0)}}
+@media (prefers-reduced-motion:reduce){.hero-scroll-circle{animation:none}}
+.note-section { background:#fff; padding:116px 0 125px; }
+.note-heading { align-items:flex-end; margin-bottom:37px; }
+.note-heading .sec-title {font-size:clamp(2rem,3.1vw,2.75rem);}
+.note-intro {margin:16px 0 0; color:var(--muted);font-size:.97rem;font-weight:500;line-height:1.8;}
+.note-featured { display:grid;grid-template-columns:1.12fr .88fr;gap:24px; }
+.note-feature,.note-item { display:flex;flex-direction:column;position:relative;color:var(--ink);transition:color .2s,transform .2s; }
+.note-feature {padding:34px 37px;min-height:350px;border-radius:15px;background:#fff8f3;border:1px solid #f2e3d8;}
+.note-feature::before {content:"";position:absolute;top:0;left:35px;width:75px;height:4px;background:var(--orange);}
+.note-side {display:grid;grid-template-rows:1fr 1fr;gap:0;}
+.note-item {padding:14px 6px 25px 8px;border-bottom:1px solid #ded9d3;}
+.note-item + .note-item {padding-top:24px;}
+.note-feature:hover,.note-item:hover {color:var(--orange);}
+.note-feature:hover {transform:translateY(-3px);}
+.note-meta {display:flex;align-items:center;gap:18px;color:var(--orange);font:700 .71rem 'Plus Jakarta Sans',sans-serif;letter-spacing:.085em;}
+.note-meta span:last-child {color:#938980;font-family:'Noto Sans JP',sans-serif;font-size:.73rem;letter-spacing:0;}
+.note-feature h3 {font-size:clamp(1.55rem,2.18vw,2.15rem);line-height:1.5;letter-spacing:-.02em;margin:28px 0 18px;}
+.note-item h3 {font-size:clamp(1.15rem,1.47vw,1.48rem);line-height:1.62;letter-spacing:-.02em;margin:15px 0;}
+.note-feature p {font-size:.96rem;line-height:1.95;color:var(--muted);margin:0 0 22px;}
+.note-read {margin-top:auto;font-size:.86rem;font-weight:700;}
+.note-demo-label {margin:18px 0 0;font-size:.75rem;color:#8f8882;}
+#media { background:#f8f7f4; padding-top:125px;padding-bottom:125px; }
+.fun-card-grid {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:19px;}
+.fun-card {display:block;min-width:0;transition:transform .25s; }
+.fun-card:hover {transform:translateY(-5px);}
+.fun-card-image {overflow:hidden;border-radius:14px;background:#eee6dc;aspect-ratio:4/3;}
+.fun-card-image img {width:100%;height:100%;object-fit:cover;transition:transform .4s;}
+.fun-card:hover .fun-card-image img {transform:scale(1.055);}
+.fun-card-copy {padding:13px 2px;}
+.fun-card-copy span {display:block;font:800 .65rem 'Plus Jakarta Sans',sans-serif;letter-spacing:.07em;color:var(--orange);margin-bottom:7px;}
+.fun-card-copy h3 {font-size:1rem;line-height:1.65;margin:0;font-weight:700;}
+@media(max-width:1024px){.fun-card-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.note-featured{grid-template-columns:1fr 1fr;}}
+@media(max-width:768px){
+ .hero-2026 .hero-lead {font-size:1.03rem;line-height:1.85;}
+ .hero-2026 .hero-bottom-bar {margin-top:15px;}
+ .note-section {padding:80px 0;}
+ .note-heading {align-items:flex-start;}
+ .note-featured {grid-template-columns:1fr;gap:12px;}
+ .note-feature {min-height:290px;padding:29px 25px;}
+ .note-side {gap:0;}
+ .note-item {padding:22px 8px;}
+ .fun-card-grid {gap:13px;}
+ .fun-card-image {aspect-ratio:1/1;}
+ .fun-card-copy h3 {font-size:.92rem;}
+ #media {padding:86px 0;}
+}
+@media(max-width:420px){.fun-card-grid{grid-template-columns:1fr 1fr;gap:11px;}.fun-card-copy h3{font-size:.83rem;}}
