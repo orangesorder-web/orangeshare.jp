@@ -437,3 +437,44 @@ h1, h2, h3, h4 {
   .hero-2026 .hero-actions .btn { padding: 13px 20px; min-height: 49px; font-size: 0.88rem; }
   .hero-2026 .hero-bottom-bar { margin-top: 18px; }
 }
+
+/* Consultation-led services — OrangeShare 2026-11 */
+.service-intro { font-size: 1.02rem; line-height: 1.85; color: var(--muted); max-width: 790px; margin: -5px 0 30px; }
+.service-choice-grid { display:grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
+.service-choice { display:flex; flex-direction:column; min-height: 235px; border:1px solid var(--line); background:var(--white); border-radius:16px; padding:26px 26px 22px; transition: border-color .2s, transform .2s, box-shadow .2s; }
+.service-choice:hover { border-color:var(--orange); box-shadow:0 12px 32px rgba(30,23,16,.07); transform:translateY(-3px); }
+.sc-number { display:flex; justify-content:space-between; align-items:center; color:var(--orange); font:800 .78rem 'Plus Jakarta Sans',sans-serif; letter-spacing:.08em; }
+.sc-arrow { color:var(--muted); font-size:1rem; }
+.service-choice h3 { font-size:1.15rem; line-height:1.55; font-weight:800; margin:18px 0 11px; text-wrap:pretty; }
+.service-choice p { color:var(--muted); font-size:.89rem; font-weight:500; line-height:1.85; margin:0 0 18px; }
+.sc-more { margin-top:auto; font-size:.81rem; font-weight:700; color:var(--ink); }
+.sc-more span { color:var(--orange); margin-left:7px; }
+.service-guide { padding-bottom:76px; }
+.service-guide-head { margin-bottom:32px; }
+.service-guide-head .sec-text { max-width:850px; }
+.service-guide-nav { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:9px; margin-bottom:58px; }
+.service-guide-nav a { display:flex; align-items:center; gap:13px; border:1px solid var(--line); border-radius:9px; padding:13px 17px; font-size:.89rem; font-weight:700; transition:background .2s; }
+.service-guide-nav a:hover { background:var(--surface); }
+.service-guide-nav a span:first-child { color:var(--orange); font:800 .78rem 'Plus Jakarta Sans',sans-serif; }
+.service-guide-nav a span:last-child { margin-left:auto; color:var(--muted); }
+.service-detail { display:grid; grid-template-columns: minmax(155px,.32fr) minmax(0,1fr); gap:34px; padding:39px 0 45px; border-top:1px solid var(--line); scroll-margin-top:105px; }
+.sd-label { font:800 .77rem 'Plus Jakarta Sans',sans-serif; color:var(--muted); letter-spacing:.06em; padding-top:9px; }
+.sd-label span { color:var(--orange); margin-right:12px; }
+.sd-content h3 { font-size:clamp(1.45rem,2.15vw,1.9rem); line-height:1.45; margin:0 0 18px; text-wrap:balance; }
+.sd-content p { font-size:.98rem; line-height:1.95; color:var(--muted); margin:0 0 17px; }
+.sd-content ul { padding-left:1.3em; margin:15px 0 22px; }
+.sd-content li { font-size:.95rem; line-height:1.85; margin-bottom:7px; }
+.sd-content .sd-note { font-size:.87rem; background:var(--surface); border-left:3px solid var(--orange); padding:14px 18px; margin:0 0 22px; }
+#subsidy, #support, #plans { scroll-margin-top:100px; }
+@media (max-width:1024px) {
+ .service-choice-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (max-width:768px) {
+ .service-choice-grid { grid-template-columns:1fr; gap:10px; }
+ .service-choice { min-height:auto; padding:20px 22px; }
+ .service-choice h3 { margin:10px 0 7px; }
+ .service-choice p { margin-bottom:10px; }
+ .service-guide-nav { grid-template-columns:1fr; margin-bottom:37px; }
+ .service-detail { grid-template-columns:1fr; gap:12px; padding:30px 0 35px; }
+ .sd-label { padding-top:0; }
+}
