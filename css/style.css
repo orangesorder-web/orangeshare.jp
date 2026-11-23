@@ -540,3 +540,43 @@ h1, h2, h3, h4 {
  .sd-content > p:first-of-type { font-size:.96rem; }
  .sd-content li { font-size:.89rem; }
 }
+
+
+/* 2026-11-23: numbers-led service typography — fewer competing visual cues */
+#service .service-choice { padding-top:25px; }
+#service .sc-number {
+  display:block; font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:clamp(2.7rem,3.4vw,3.9rem); font-weight:800;
+  line-height:1.02; letter-spacing:-.075em; color:var(--orange);
+  opacity:.9;
+}
+#service .service-choice h3 { margin-top:25px; }
+#service .service-choice .sc-more { margin-top:auto; }
+#service .service-choice:nth-child(4) h3 { font-size:clamp(1.1rem,1.27vw,1.28rem); letter-spacing:-.035em; }
+.service-detail .sd-label {
+  display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-start;
+  gap:16px; padding-top:0; white-space:normal;
+}
+.service-detail .sd-label .sd-num {
+  display:block; width:auto; height:auto; padding:0; margin:0;
+  background:transparent; border-radius:0;
+  color:var(--orange); font:800 clamp(4.4rem,7vw,7.8rem)/.92 'Plus Jakarta Sans',sans-serif;
+  letter-spacing:-.085em;
+}
+.service-detail .sd-label .sd-en {
+  display:block; width:auto; height:auto; padding:0; margin:0;
+  background:transparent; border-radius:0;
+  font:800 .82rem/1.7 'Plus Jakarta Sans',sans-serif;
+  color:#8d8279; letter-spacing:.12em;
+}
+@media (max-width:1024px) {
+ .service-detail .sd-label .sd-num { font-size:clamp(4.1rem,8vw,6rem); }
+}
+@media (max-width:768px) {
+ #service .sc-number { font-size:2.75rem; }
+ #service .service-choice h3 { margin-top:13px; }
+ #service .service-choice:nth-child(4) h3 { font-size:1.17rem; }
+ .service-detail .sd-label { flex-direction:row; align-items:center; gap:18px; margin-bottom:19px; }
+ .service-detail .sd-label .sd-num { font-size:4.15rem; }
+ .service-detail .sd-label .sd-en { font-size:.72rem; }
+}
