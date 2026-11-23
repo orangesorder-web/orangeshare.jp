@@ -580,3 +580,11 @@ h1, h2, h3, h4 {
  .service-detail .sd-label .sd-num { font-size:4.15rem; }
  .service-detail .sd-label .sd-en { font-size:.72rem; }
 }
+
+/* 2026-11-23: final service card copy and typography refinements */
+#service .service-intro { max-width: 960px; text-wrap: pretty; }
+#service .service-choice:nth-child(4) h3 { font-size:clamp(1.18rem,1.42vw,1.42rem); letter-spacing:-.02em; }
+@media (max-width:768px) {
+  #service .service-intro { max-width:100%; }
+  #service .service-choice:nth-child(4) h3 { font-size:1.2rem; letter-spacing:-.02em; }
+}
