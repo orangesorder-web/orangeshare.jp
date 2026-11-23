@@ -737,3 +737,16 @@ body:not(.page-home) .site-header .brand-logotype { filter:brightness(0) !import
  #media {padding:86px 0;}
 }
 @media(max-width:420px){.fun-card-grid{grid-template-columns:1fr 1fr;gap:11px;}.fun-card-copy h3{font-size:.83rem;}}
+
+/* Note preview illustration and standalone example article details */
+.note-feature { padding-right:170px; }
+.note-feature-illustration { position:absolute;right:18px;bottom:42px;width:135px;height:93px;object-fit:cover;border-radius:10px;box-shadow:0 5px 19px rgba(188,92,25,.08);}
+.note-preview-disclaimer { margin:22px 0 0; font-size:.87rem; color:#73675e; }
+.note-detail-page { padding:60px 0 110px; }
+.note-example { max-width:880px;margin:0 auto;padding:52px 0 66px;border-bottom:1px solid var(--line);scroll-margin-top:110px;}
+.note-example h2 { margin:10px 0 25px;font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.5; }
+.note-example p { max-width:760px;color:#44444b;font-size:1rem;line-height:2.15;margin:0 0 22px; }
+.note-example-image { width:100%;max-width:720px;border-radius:16px;margin:0 0 30px; }
+.note-back {max-width:880px;margin:40px auto 0;}
+@media(max-width:1024px){.note-feature{padding-right:36px;}.note-feature-illustration{display:none;}}
+@media(max-width:768px){.note-example{padding:36px 0 50px;}.note-detail-page{padding:20px 0 80px;}}
