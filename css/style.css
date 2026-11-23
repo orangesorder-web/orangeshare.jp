@@ -660,3 +660,24 @@ body:not(.page-home) .site-header .brand-lockup {
   .brand .brand-lockup { width:158px; max-height:49px; }
   .site-footer .brand-lockup { width:184px; }
 }
+
+/* 2026-11-24: actual user-provided OrangeShare logo artwork, faithfully vectorized */
+.brand .brand-logotype { width:203px; height:auto; max-height:45px; object-fit:contain; }
+body:not(.page-home) .site-header .brand-logotype { filter:brightness(0) !important; }
+.page-home .site-header .brand-logotype, .site-footer .brand-logotype { filter:none !important; }
+.site-footer .brand-logotype { width:217px; }
+.hero-2026 .hero-brand-disc {
+  background:transparent; box-shadow:none; border:0;
+  width:min(100%,380px); border-radius:0;
+}
+.hero-2026 .hero-brand-disc::before { content:none; }
+.hero-2026 .hero-brand-disc img {
+  width:94%; height:94%; object-fit:contain;
+  transform:rotate(-11deg);
+  filter:drop-shadow(16px 20px 1px rgba(148,40,0,.15));
+}
+@media (max-width:768px) {
+  .brand .brand-logotype { width:166px; max-height:39px; }
+  .site-footer .brand-logotype { width:194px; }
+  .hero-2026 .hero-brand-disc { width:93%; }
+}
