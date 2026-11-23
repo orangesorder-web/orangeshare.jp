@@ -588,3 +588,62 @@ h1, h2, h3, h4 {
   #service .service-intro { max-width:100%; }
   #service .service-choice:nth-child(4) h3 { font-size:1.2rem; letter-spacing:-.02em; }
 }
+
+/* 2026-11-24 — OrangeShare brand hero, about illustration and FUN navigation */
+.brand { gap: 10px; }
+.brand-symbol { width:26px; height:26px; display:block; flex:none; object-fit:contain; }
+.page-home .site-header .brand-symbol, .site-footer .brand-symbol { filter:none; }
+body:not(.page-home) .site-header .brand-symbol {
+  filter:brightness(0) saturate(100%) invert(39%) sepia(94%) saturate(4975%) hue-rotate(2deg) brightness(104%) contrast(105%);
+}
+.site-footer .brand-symbol { width:30px; height:30px; }
+.hero-angled.hero-2026 {
+  background-color:#ff5500;
+  background-image:linear-gradient(125deg,#ff5c04 0%,#ff5100 55%,#ed4d00 100%);
+  color:#fff;
+  padding-top:100px; padding-bottom:116px;
+}
+.hero-2026 .hero-grid-pattern { display:block; opacity:.3; }
+.hero-2026 .hero-orb { display:block; }
+.hero-2026 .hero-grid {
+  display:grid; grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr);
+  gap:36px; align-items:center; min-height:440px;
+}
+.hero-2026 .hero-copy { width:100%; max-width:770px; }
+.hero-2026 .hero-line { background:#fff; }
+.hero-2026 .hero-en, .hero-2026 .hero-title, .hero-2026 .hero-lead { color:#fff; }
+.hero-2026 .hero-en { opacity:.86; }
+.hero-2026 .hero-lead { opacity:.93; max-width:760px; }
+.hero-2026 .hero-title { font-size:clamp(2rem,4vw,3.4rem); }
+.hero-2026 .btn-dark { background:#161619; color:#fff; }
+.hero-2026 .btn-ghost-light { background:rgba(255,255,255,.13); border-color:rgba(255,255,255,.65); color:#fff; }
+.hero-2026 .hero-bottom-bar { border-top-color:rgba(255,255,255,.3); color:#fff; justify-content:flex-end; }
+.hero-brand-art { position:relative; display:grid; place-items:center; width:100%; aspect-ratio:1; max-width:420px; justify-self:center; }
+.hero-brand-disc {
+  width:min(90%,365px); aspect-ratio:1; display:grid; place-items:center;
+  border-radius:50%; position:relative;
+  background:radial-gradient(circle at 30% 25%,rgba(255,166,101,.62),rgba(255,98,20,.22) 50%,rgba(155,36,0,.2) 83%);
+  box-shadow:28px 30px 45px rgba(127,28,0,.20), inset 10px 10px 28px rgba(255,235,217,.20),inset -12px -14px 22px rgba(146,34,0,.14);
+}
+.hero-brand-disc::before { content:""; position:absolute; inset:8%; border:1px solid rgba(255,255,255,.16); border-radius:50%; }
+.hero-brand-disc img { position:relative; width:68%; height:68%; object-fit:contain; filter:drop-shadow(13px 15px 0 rgba(136,32,0,.15)) drop-shadow(-3px -3px 8px rgba(255,255,255,.13)); transform:rotate(-8deg); }
+#about { background:#fff1e6; }
+#about .offset-media { background:#fff6ee; padding:12px; border-radius:24px; box-shadow:0 12px 38px rgba(139,66,18,.07); overflow:hidden; }
+#about .offset-media img { width:100%; aspect-ratio: 16/10; object-fit:cover; object-position:63% center; border-radius:15px; }
+#service .service-intro { display:none; }
+@media (max-width:1024px) {
+ .hero-2026 .hero-grid { grid-template-columns:minmax(0,1.3fr) minmax(230px,.7fr); gap:15px; }
+ .hero-2026 .hero-title { font-size:clamp(2rem,3.7vw,3.2rem); }
+ .hero-brand-disc { width:min(100%,300px); }
+}
+@media (max-width:768px) {
+ .hero-angled.hero-2026 { background-image:linear-gradient(145deg,#ff5900,#eb4b00); padding-top:54px; padding-bottom:75px; }
+ .hero-2026 .hero-grid { grid-template-columns:1fr; min-height:0; gap:18px; }
+ .hero-2026 .hero-copy { max-width:100%; }
+ .hero-2026 .hero-title { font-size:clamp(1.85rem,6.7vw,2.7rem); }
+ .hero-2026 .hero-brand-art { max-width:220px; margin-top:16px; aspect-ratio:1; }
+ .hero-brand-disc { width:94%; }
+ .hero-2026 .hero-bottom-bar { margin-top:22px; }
+ #about .offset-media { padding:8px; }
+ #about .offset-media img { aspect-ratio:16/10; object-position:65% center; }
+}
