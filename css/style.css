@@ -939,3 +939,40 @@ body:not(.page-home) .site-header .brand-logotype { filter:brightness(0) !import
  .inner-visual-works::before{width:155px;height:155px;left:35px;top:0;box-shadow:0 0 0 26px rgba(255,255,255,.045);}
  .works-filter-wrap{margin:0 0 28px;}
 }
+
+/* 2026-11-24: align clipped orange hero with warm ABOUT section, avoiding white wedges */
+.page-home .hero-angled.hero-2026 {position:relative;z-index:2;}
+.page-home #about {position:relative;z-index:1;margin-top:-112px;padding-top:calc(112px + 108px);}
+.page-home #about .offset-grid {position:relative;z-index:1;}
+/* Six service illustrations, deliberately light and not competing with article titles */
+.service-detail .sd-label {min-height:235px;}
+.service-detail .sd-symbol {display:block;width:142px;max-width:100%;height:142px;flex-shrink:0;margin-top:auto;color:#eb7a43;opacity:.25;transition:opacity .25s,transform .25s;}
+.service-detail:hover .sd-symbol {opacity:.4;transform:translateY(-3px);}
+.service-detail .sd-label .sd-num {flex:none;}
+.subsidy-content {position:relative;}
+.subsidy-symbol {position:absolute;right:5%;bottom:2%;width:128px;height:128px;opacity:.16;color:var(--orange);pointer-events:none;}
+/* Balanced maintenance cards; concise line lengths and clear service examples */
+.maint-grid {gap:17px;}
+.maint-grid .m-box {padding:30px 22px;}
+.maint-grid .m-box ul {list-style:none;padding:0;margin:8px 0 20px;}
+.maint-grid .m-box ul li {position:relative;padding-left:14px;font-size:.875rem;line-height:1.7;margin-bottom:11px;overflow-wrap:anywhere;}
+.maint-grid .m-box ul li::before {content:"";position:absolute;width:5px;height:5px;left:0;top:.8em;background:var(--orange);border-radius:50%;}
+.maint-grid .m-box ul li strong {font-weight:700;}
+.maint-grid .m-box .m-sub {margin-top:auto!important;border-top:1px solid var(--line);padding-top:16px;line-height:1.7;}
+.maint-grid .m-box p {line-height:1.85;}
+.plan-pricing-note,.support-pricing-note {font-size:.86rem;line-height:1.85;color:var(--muted);margin:21px 2px 0;max-width:1040px;}
+.support-pricing-note {margin-top:25px;}
+@media(max-width:1024px){
+ .service-detail .sd-symbol {width:115px;height:115px;}
+ .maint-grid {gap:12px;}
+ .maint-grid .m-box {padding:24px 17px;}
+ .maint-grid .m-box ul li {font-size:.83rem;}
+}
+@media(max-width:768px){
+ .page-home #about {margin-top:-65px;padding-top:calc(65px + 78px);}
+ .service-detail .sd-label {min-height:0;}
+ .service-detail .sd-symbol {display:none;}
+ .subsidy-symbol {width:80px;height:80px;opacity:.11;}
+ .maint-grid .m-box {padding:25px 22px;}
+ .maint-grid .m-box ul li {font-size:.9rem;overflow-wrap:normal;}
+}
