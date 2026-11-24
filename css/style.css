@@ -1398,3 +1398,17 @@ body:not(.page-home) .site-header.is-scrolled .brand-logotype,
 .case-spotlight-attic .case-spotlight-overline,.case-spotlight-attic .case-spotlight-read{color:#a97448;}
 .case-spotlight-attic+.case-spotlight{padding-top:12px;}
 @media(max-width:768px){.case-attic-shops{grid-template-columns:1fr;}.case-attic .case-v2-heading h1{font-size:clamp(1.9rem,5.15vw,2.5rem);}.case-attic .case-v2-hero-grid{grid-template-columns:1fr;}.case-attic .case-attic-frame{padding:12px;}}
+
+/* 2026-11-24 supplied ATTIC homepage screenshot and original-site story photos */
+.case-attic .case-attic-frame-viewport{aspect-ratio:1488/601;background:#fff;}
+.case-attic .case-attic-frame-viewport img{width:100%;height:100%;object-fit:contain;object-position:center;}
+.case-spotlight-attic .case-spotlight-img{background:#fff;aspect-ratio:2/1;padding:9px;}
+.case-spotlight-attic .case-spotlight-img img{object-fit:contain;object-position:center;}
+.m-card:has(img[src="images/work-attic-screenshot.webp"]) .m-img{background:#fff;}
+.m-card img[src="images/work-attic-screenshot.webp"]{object-fit:contain;object-position:center;}
+.case-site-photo{max-width:650px;margin:34px 0 12px;}
+.case-site-photo img{display:block;width:100%;height:auto;border-radius:9px;border:1px solid rgba(80,60,45,.12);background:#f7f5f2;}
+.case-site-photo figcaption{font-size:.76rem;line-height:1.8;margin-top:10px;color:#77716a;}
+.case-site-photo-nagata{max-width:400px;}
+.case-site-photo-nagata img{aspect-ratio:4/3;object-fit:cover;}
+@media(max-width:760px){.case-site-photo{max-width:100%;}.case-site-photo-nagata{max-width:min(100%,360px);}}
