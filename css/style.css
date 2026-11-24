@@ -1195,3 +1195,20 @@ body:not(.page-home) .site-header .brand-logotype { filter:brightness(0) !import
  .case-v2-frame-placeholder {min-height:220px;}
  .case-v2-story-lead p {max-width:none;}
 }
+
+/* Case study: static client screenshot + featured overview card */
+.case-v2-frame-screenshot{background:#e6e9ed;}
+.case-v2-frame-screenshot img{display:block;width:100%;height:100%;object-fit:cover;object-position:top center;}
+.case-spotlight .case-spotlight-link{display:grid;grid-template-columns:minmax(235px,.75fr) minmax(0,1.25fr);gap:36px;align-items:center;padding:25px;background:#fff;border:1px solid #e5ddd3;border-radius:16px;transition:transform .25s,box-shadow .25s;}
+.case-spotlight .case-spotlight-link:hover{transform:translateY(-3px);box-shadow:0 16px 45px rgba(25,20,16,.08);}
+.case-spotlight .case-spotlight-img{overflow:hidden;border-radius:9px;aspect-ratio:1.5;box-shadow:0 8px 25px rgba(18,26,38,.08);}
+.case-spotlight .case-spotlight-img img{display:block;width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .4s;}
+.case-spotlight .case-spotlight-link:hover .case-spotlight-img img{transform:scale(1.025);}
+.case-spotlight .case-spotlight-text{min-width:0;}
+.case-spotlight .case-spotlight-overline{display:block;font:800 .72rem 'Plus Jakarta Sans',sans-serif;color:var(--orange);letter-spacing:.12em;margin-bottom:15px;}
+.case-spotlight .case-spotlight-text>small{display:block;color:#69666a;font-size:.85rem;font-weight:700;}
+.case-spotlight .case-spotlight-text h2{font-size:clamp(1.36rem,2vw,1.86rem);margin:13px 0;line-height:1.55;}
+.case-spotlight .case-spotlight-text p{font-size:.9rem;line-height:1.8;margin:0;color:var(--ink-soft);}
+.case-spotlight .case-spotlight-read{display:inline-block;margin-top:17px;color:var(--orange);font-size:.86rem;font-weight:800;}
+.case-spotlight .case-spotlight-read b{font-size:1.1em;margin-left:6px;}
+@media(max-width:768px){.case-spotlight .case-spotlight-link{grid-template-columns:1fr;gap:24px;padding:16px 16px 24px;}.case-spotlight .case-spotlight-img{aspect-ratio:1.6;}.case-spotlight .case-spotlight-text{padding:0 9px;}}
