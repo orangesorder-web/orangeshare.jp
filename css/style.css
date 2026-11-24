@@ -976,3 +976,37 @@ body:not(.page-home) .site-header .brand-logotype { filter:brightness(0) !import
  .maint-grid .m-box {padding:25px 22px;}
  .maint-grid .m-box ul li {font-size:.9rem;overflow-wrap:normal;}
 }
+
+/* 2026-11-24: eliminate white seams between clipped homepage sections.
+   Each next section overlaps beneath the clipped shape so its real background
+   (not the white body) is visible through the diagonal cut. */
+.page-home #about {
+  z-index:1;
+}
+.page-home #works.section-angled-tint {
+  position:relative;
+  z-index:2;
+  margin-top:-104px;
+  padding-top:244px; /* original 140px + overlap */
+}
+.page-home #note {
+  position:relative;
+  z-index:1;
+}
+.page-home #area.section-dark-angled {
+  position:relative;
+  z-index:2;
+  margin-top:-94px;
+  padding-top:234px;
+}
+.page-home #media {
+  position:relative;
+  z-index:1;
+  margin-top:-94px;
+  padding-top:219px; /* original 125px + overlap */
+}
+@media (max-width:768px) {
+  .page-home #works.section-angled-tint {margin-top:-60px;padding-top:200px;}
+  .page-home #area.section-dark-angled {margin-top:-60px;padding-top:200px;}
+  .page-home #media {margin-top:-60px;padding-top:146px;}
+}
