@@ -1,5 +1,33 @@
 // OrangeShare Studio V11 Interactive Scripts
 document.addEventListener('DOMContentLoaded', () => {
+  // Slightly springy sticky header: top stays as designed, scroll turns orange.
+  const siteHeader = document.querySelector('.site-header');
+  if (siteHeader) {
+    let lastScrolled = false;
+    let scheduled = false;
+    const updateHeader = () => {
+      const scrolled = window.scrollY > 22;
+      if (scrolled !== lastScrolled) {
+        siteHeader.classList.toggle('is-scrolled', scrolled);
+        if (scrolled && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          siteHeader.classList.remove('scroll-bounce');
+          void siteHeader.offsetWidth;
+          siteHeader.classList.add('scroll-bounce');
+        } else {
+          siteHeader.classList.remove('scroll-bounce');
+        }
+        lastScrolled = scrolled;
+      }
+      scheduled = false;
+    };
+    window.addEventListener('scroll', () => {
+      if (!scheduled) {
+        scheduled = true;
+        window.requestAnimationFrame(updateHeader);
+      }
+    }, { passive: true });
+    updateHeader();
+  }
   const menuToggle = document.getElementById('menuToggle');
   const mobileDrawer = document.getElementById('mobileDrawer');
   if (menuToggle && mobileDrawer) {
