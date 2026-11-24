@@ -1371,3 +1371,30 @@ body:not(.page-home) .site-header.is-scrolled .brand-logotype,
   .case-spotlight-seishin .case-spotlight-img{padding:12px 10px 8px;}
   .m-card--seishin .m-img{padding:10px 8px 6px;}
 }
+
+/* ATTIC project case: warm editorial tone, multi-location distinctions */
+.case-attic .case-attic-hero{background:linear-gradient(124deg,#f8f5ef 0%,#fff8f0 52%,#f4ede4 100%);}
+.case-attic .case-v2-heading h1{font-size:clamp(1.9rem,2.5vw,3.04rem);line-height:1.52;}
+.case-attic .case-v2-heading>p{max-width:560px;}
+.case-attic .case-attic-visual,.case-attic .case-attic-visual:hover{transform:rotate(3deg);}
+.case-attic .case-attic-frame{border:0;padding:18px;background:#fff;border-radius:12px;box-shadow:0 18px 50px rgba(65,45,28,.16);}
+.case-attic .case-attic-frame-viewport{aspect-ratio:1.5;background:#f3eee7;overflow:hidden;line-height:0;}
+.case-attic .case-attic-frame-viewport img{display:block;width:100%;height:100%;object-fit:contain;object-position:center center;}
+.case-attic .case-v2-client-heading{border-left-color:#a97448;}
+.case-attic .case-v2-summary{background:#f6f2ed;}
+.case-attic .case-v2-summary-card{border-color:#eee5da;}
+.case-attic .case-v2-story-label span{color:#f3e7db;}
+.case-attic .case-v2-story-label p,.case-attic .case-v2-summary-card>span,.case-attic .case-v2-feature-grid span{color:#b17644;}
+.case-attic .case-v2-highlight{background:#f9f3ec;}
+.case-attic .case-v2-highlight span{color:#b17644;}
+.case-attic-shops{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin:30px 0;}
+.case-attic-shops>div{border:1px solid #e9e2d9;border-radius:9px;padding:25px;background:#fdfbf8;}
+.case-attic-shops>div>span{font:800 .69rem 'Plus Jakarta Sans',sans-serif;letter-spacing:.12em;color:#a97448;display:block;margin-bottom:12px;}
+.case-attic-shops strong{display:block;font-size:1.05rem;margin-bottom:10px;}
+.case-attic-shops p{font-size:.87rem;line-height:1.85;color:#625d57;margin:0;}
+.case-spotlight-attic{padding-top:63px;padding-bottom:18px;}
+.case-spotlight-attic .case-spotlight-img{background:#f6f1eb;padding:10px;aspect-ratio:1.55;}
+.case-spotlight-attic .case-spotlight-img img{object-fit:contain;}
+.case-spotlight-attic .case-spotlight-overline,.case-spotlight-attic .case-spotlight-read{color:#a97448;}
+.case-spotlight-attic+.case-spotlight{padding-top:12px;}
+@media(max-width:768px){.case-attic-shops{grid-template-columns:1fr;}.case-attic .case-v2-heading h1{font-size:clamp(1.9rem,5.15vw,2.5rem);}.case-attic .case-v2-hero-grid{grid-template-columns:1fr;}.case-attic .case-attic-frame{padding:12px;}}
