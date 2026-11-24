@@ -1279,3 +1279,31 @@ body:not(.page-home) .site-header.is-scrolled .brand-logotype,
 @media(max-width:480px) {
   .case-v2 .case-v2-frame-viewport.case-v2-frame-screenshot {aspect-ratio:auto;}
 }
+
+/* 2026-11-24: Seishin Kosoku — distinct blue-accent technical case story */
+.case-seishin .case-seishin-hero{background:linear-gradient(118deg,#f2f5f8 0%,#eff4f7 56%,#e4edf3 100%);}
+.case-seishin .case-step,.case-seishin .case-v2-story-label p,.case-seishin .case-v2-summary-card>span,.case-seishin .case-v2-feature-grid span {color:#246887;}
+.case-seishin .case-v2-client-heading{border-left-color:#246887;}
+.case-seishin .case-v2-hero-grid{grid-template-columns:minmax(0,1.18fr) minmax(330px,.82fr);}
+.case-seishin .case-v2-heading h1{font-size:clamp(1.7rem,2.2vw,2.6rem);line-height:1.55;}
+.case-seishin .case-seishin-frame{border-color:#fff;box-shadow:11px 22px 55px rgba(10,40,65,.16);}
+.case-seishin .case-seishin-frame-viewport{aspect-ratio:905/509;background:#153343;overflow:hidden;line-height:0;}
+.case-seishin .case-seishin-frame-viewport img{display:block;width:100%;height:100%;object-fit:contain;}
+.case-seishin .case-seishin-visual{transform:rotate(4deg);}
+.case-seishin .case-seishin-visual:hover{transform:rotate(4deg);}
+.case-seishin .case-seishin-visual-accent{position:absolute;right:-9px;bottom:3px;padding:11px 15px;background:#203e50;color:#fff;font:800 .68rem 'Plus Jakarta Sans',sans-serif;letter-spacing:.13em;border-radius:5px;}
+.case-seishin .case-v2-highlight{background:#edf4f7;}
+.case-seishin .case-v2-highlight span{color:#246887;}
+.case-seishin .case-v2-story-label span{color:#e2edf3;}
+.case-seishin .case-v2-summary{background:#f2f5f7;}
+.case-seishin .case-v2-summary-card{border-color:#e1e7e9;}
+.case-seishin-image{margin-top:30px;max-width:670px;}
+.case-seishin-image img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid #e5ecef;}
+.case-seishin-image span{display:block;font-size:.76rem;color:#777;margin-top:10px;}
+.case-spotlight-seishin{padding-top:62px;padding-bottom:18px;background:var(--surface);}
+.case-spotlight-seishin .case-spotlight-img{background:#163544;}
+.case-spotlight-seishin .case-spotlight-img img{object-fit:cover;}
+.case-spotlight-seishin .case-spotlight-overline{color:#246887;}
+.case-spotlight-seishin .case-spotlight-read{color:#246887;}
+.case-spotlight-seishin+.case-spotlight{padding-top:13px;}
+@media(max-width:768px){.case-seishin .case-v2-hero-grid{grid-template-columns:1fr;}.case-seishin .case-v2-heading h1{font-size:clamp(1.85rem,5.1vw,2.4rem);}.case-seishin .case-seishin-visual{max-width:450px;}.case-seishin-image{max-width:100%;}}
