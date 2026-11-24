@@ -1307,3 +1307,11 @@ body:not(.page-home) .site-header.is-scrolled .brand-logotype,
 .case-spotlight-seishin .case-spotlight-read{color:#246887;}
 .case-spotlight-seishin+.case-spotlight{padding-top:13px;}
 @media(max-width:768px){.case-seishin .case-v2-hero-grid{grid-template-columns:1fr;}.case-seishin .case-v2-heading h1{font-size:clamp(1.85rem,5.1vw,2.4rem);}.case-seishin .case-seishin-visual{max-width:450px;}.case-seishin-image{max-width:100%;}}
+
+/* Exact client-supplied Seishin screenshot — stable local image, fit without clipping */
+.case-seishin .case-seishin-frame-viewport{aspect-ratio:1483 / 830;}
+.case-seishin .case-seishin-frame-viewport img{width:100%;height:100%;object-fit:contain;object-position:center center;}
+.case-spotlight-seishin .case-spotlight-img{aspect-ratio:1483/830;}
+.case-spotlight-seishin .case-spotlight-img img{width:100%;height:100%;object-fit:contain;object-position:center center;}
+.m-card--seishin .m-img{background:#071b56;}
+.m-card--seishin .m-img img{object-fit:contain;object-position:center center;}
