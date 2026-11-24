@@ -1,0 +1,45 @@
+name: Capture Nagata site screenshot
+on:
+  push:
+    paths:
+      - .github/workflows/capture-nagata.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  screenshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: browser-actions/setup-chrome@v2
+      - name: Capture website screenshot
+        run: |
+          mkdir -p images
+          google-chrome --headless --disable-gpu --no-sandbox --hide-scrollbars --window-size=1484,978 --screenshot=/tmp/nagata.png https://nbk-nagasaki.com/ || true
+          python3 -m pip install --quiet pillow
+          python3 - <<'PY'
+          from PIL import Image
+          import os
+          src='/tmp/nagata.png'
+          if not os.path.exists(src):
+              raise RuntimeError('Screenshot did not generate')
+          im=Image.open(src).convert('RGB')
+          # Save a stable raster image sized for the case-study hero and its thumbnail
+          im.resize((1280,844),Image.Resampling.LANCZOS).save('images/work-nagata.jpg',format='JPEG',quality=83,optimize=True)
+          print('Wrote screenshot JPEG:',os.stat('images/work-nagata.jpg').st_size,'bytes')
+          PY
+      - name: Commit screenshot to the site
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add images/work-nagata.jpg
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Add static screenshot of Nagata Bankin website"
+            git push
+          fi
