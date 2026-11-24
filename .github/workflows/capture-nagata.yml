@@ -18,6 +18,8 @@ jobs:
       - uses: browser-actions/setup-chrome@v2
       - name: Capture website screenshot
         run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-noto-cjk
           mkdir -p images
           google-chrome --headless --disable-gpu --no-sandbox --hide-scrollbars --window-size=1484,978 --screenshot=/tmp/nagata.png https://nbk-nagasaki.com/ || true
           python3 -m pip install --quiet pillow
