@@ -897,3 +897,45 @@ body:not(.page-home) .site-header .brand-logotype { filter:brightness(0) !import
  .about-story-section .essay-block p {font-size:.96rem;line-height:2;}
  .about-story-section .evidence-cards {grid-template-columns:1fr;gap:12px;}
 }
+
+/* 2026-11-24 consistent editorial inner-page heroes */
+.inner-page-hero {overflow:hidden;}
+.inner-page-hero .about-hero-layout {grid-template-columns:minmax(0,1.3fr) minmax(260px,.7fr);}
+.inner-page-hero .about-hero-copy {position:relative;z-index:2;}
+.inner-page-hero .page-title {font-size:clamp(2.1rem,3.6vw,3.4rem);}
+.inner-page-hero .page-lead {max-width:640px;}
+.inner-hero-visual {position:relative;height:310px;max-width:390px;width:100%;justify-self:center;isolation:isolate;}
+/* ABOUT: gentle layered paper / glass shapes, without circles or lettering */
+.about-hero .inner-visual-about {transform:rotate(-8deg);}
+.iv-about-sheet {position:absolute;border:1.5px solid rgba(255,255,255,.43);border-radius:30px;transform:skewY(-5deg);}
+.iv-about-sheet-back {width:66%;height:64%;left:22%;top:10%;background:rgba(255,255,255,.055);box-shadow:28px 24px 42px rgba(149,37,0,.08);}
+.iv-about-sheet-front {width:65%;height:63%;left:12%;top:23%;background:linear-gradient(140deg,rgba(255,255,255,.2),rgba(255,255,255,.055));box-shadow:18px 22px 32px rgba(149,37,0,.1);}
+.iv-about-line {position:absolute;left:24%;width:36%;height:2px;border-radius:4px;background:rgba(255,255,255,.6);transform:rotate(-5deg);}
+.iv-about-line-one {top:43%}.iv-about-line-two {top:52%;width:27%;opacity:.67}.iv-about-line-three {top:61%;width:31%;opacity:.45}
+/* WORKS: former ABOUT rings, now framing subtle stacked project previews */
+.inner-visual-works::before {content:"";position:absolute;width:240px;height:240px;border:1.5px solid rgba(255,255,255,.42);border-radius:50%;top:30px;left:52px;box-shadow:0 0 0 43px rgba(255,255,255,.05),0 0 0 77px rgba(255,255,255,.022);}
+.iv-work-window {position:absolute;display:block;border:1px solid rgba(255,255,255,.5);border-radius:14px;box-shadow:10px 16px 30px rgba(140,31,0,.12);}
+.iv-work-window-back {width:180px;height:133px;left:45%;top:14%;transform:rotate(12deg);background:rgba(255,255,255,.13);}
+.iv-work-window-middle {width:174px;height:135px;left:17%;top:37%;transform:rotate(-12deg);background:rgba(255,255,255,.16);}
+.iv-work-window-front {width:187px;height:140px;left:28%;top:28%;transform:rotate(3deg);background:rgba(255,255,255,.21);padding:22px;}
+.iv-work-window-front i {display:block;height:8px;width:75%;border-radius:12px;background:rgba(255,255,255,.64);margin:0 0 14px;}
+.iv-work-window-front i:nth-child(2){width:52%;opacity:.58}.iv-work-window-front i:nth-child(3){width:68%;opacity:.4}
+/* SERVICE: arranged, connected points suggesting modular solutions */
+.iv-service-track {position:absolute;left:16%;top:47%;width:69%;height:2px;background:rgba(255,255,255,.43);transform:rotate(-27deg);}
+.iv-service-node {position:absolute;width:98px;height:75px;display:block;border:1.5px solid rgba(255,255,255,.49);border-radius:19px;background:linear-gradient(140deg,rgba(255,255,255,.22),rgba(255,255,255,.08));box-shadow:12px 18px 27px rgba(150,42,0,.1);}
+.iv-node-1{left:8%;top:56%;transform:rotate(-13deg)}.iv-node-2{left:31%;top:32%;transform:rotate(6deg)}.iv-node-3{left:60%;top:14%;transform:rotate(-9deg)}.iv-node-4{left:63%;top:63%;width:66px;height:53px;opacity:.67;transform:rotate(10deg)}
+/* CONTACT: understated conversation card */
+.iv-contact-card{position:absolute;display:block;border:1.5px solid rgba(255,255,255,.49);border-radius:24px;}
+.iv-contact-card-back{width:66%;height:57%;top:12%;left:27%;transform:rotate(10deg);background:rgba(255,255,255,.09);}
+.iv-contact-card-front{width:68%;height:61%;top:28%;left:12%;transform:rotate(-7deg);background:linear-gradient(135deg,rgba(255,255,255,.21),rgba(255,255,255,.06));box-shadow:16px 21px 34px rgba(148,42,0,.11);padding:32px;}
+.iv-contact-card-front i{display:block;width:80%;height:9px;border-radius:10px;background:rgba(255,255,255,.58);margin-bottom:18px;}
+.iv-contact-card-front i:nth-child(2){width:55%;opacity:.67}.iv-contact-card-front i:nth-child(3){width:66%;opacity:.45}
+.iv-contact-tail{position:absolute;bottom:11%;left:19%;width:40px;height:24px;border-left:1.5px solid rgba(255,255,255,.44);transform:skew(-31deg);opacity:.75}
+.works-filter-wrap{margin:-5px 0 42px;}
+.works-filter-wrap .filter-bar{margin-top:0;}
+@media(max-width:768px){
+ .inner-page-hero .about-hero-layout {grid-template-columns:1fr;gap:0;}
+ .inner-page-hero .inner-hero-visual,.about-hero .inner-visual-about {height:135px;width:200px;max-width:100%;justify-self:end;margin-top:14px;transform:scale(.7);transform-origin:right center;}
+ .inner-visual-works::before{width:155px;height:155px;left:35px;top:0;box-shadow:0 0 0 26px rgba(255,255,255,.045);}
+ .works-filter-wrap{margin:0 0 28px;}
+}
