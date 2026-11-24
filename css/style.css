@@ -1103,3 +1103,66 @@ body:not(.page-home) .site-header .brand-logotype { filter:brightness(0) !import
 .case-spotlight-note{font-size:.78rem;color:var(--muted);margin:12px 0 0;}
 @media(max-width:768px){.case-detail-hero{padding:60px 0;}.case-detail-hero-grid,.case-detail-layout{grid-template-columns:1fr;gap:35px;}.case-detail-preview{max-width:370px;margin:0 auto;}.case-detail-facts>.container{grid-template-columns:1fr 1fr;}.case-detail-layout aside{position:static;}.case-detail-articles article{margin-bottom:55px;padding-bottom:55px;}.case-spotlight a{grid-template-columns:1fr 25px;padding:25px;}.case-spotlight a>span{grid-column:1/-1;}}
 @media(max-width:440px){.case-detail-facts>.container{grid-template-columns:1fr;}}
+
+/* Case study v2: independent editorial design, separate from the About layout */
+.case-v2 .case-v2-hero {background:linear-gradient(123deg,#faf6f1 0%,#fff4e9 100%);overflow:hidden;padding:92px 0 100px;}
+.case-v2-hero-grid {display:grid;grid-template-columns:minmax(0,1.11fr) minmax(330px,.89fr);align-items:center;gap:64px;}
+.case-v2-heading {min-width:0;}
+.case-v2-heading h1 {font-size:clamp(1.75rem,2.62vw,2.85rem);line-height:1.65;letter-spacing:-.045em;margin:0 0 28px;font-weight:900;}
+.case-v2-heading>p {font-size:1rem;line-height:1.95;color:var(--ink-soft);max-width:625px;margin:0 0 25px;}
+.case-v2 .case-detail-tags {margin-top:20px;}
+.case-v2 .case-detail-tags span {font-size:.72rem;padding:7px 10px;}
+.case-v2-visual {display:block;position:relative;min-width:0;padding:6px 13px 24px;transform:rotate(5deg);transition:transform .35s ease;}
+.case-v2-visual:hover {transform:rotate(2deg) translateY(-5px);}
+.case-v2-visual-frame {background:#fff;border:9px solid #fff;border-radius:17px;box-shadow:11px 24px 60px rgba(27,33,44,.19);overflow:hidden;}
+.case-v2-frame-bar {background:#f2f4f7;display:flex;gap:5px;align-items:center;height:33px;padding:0 11px;}
+.case-v2-frame-bar i {display:block;width:7px;height:7px;border-radius:50%;background:#c8cdd3;}
+.case-v2-frame-bar span {margin:auto;font:600 .68rem 'Plus Jakarta Sans',sans-serif;color:#6b7885;letter-spacing:.02em;}
+.case-v2-frame-viewport {aspect-ratio: 1.17 / 1;position:relative;overflow:hidden;background:#dae3eb;}
+.case-v2-frame-viewport img {width:100%;height:auto;display:block;object-fit:cover;object-position:top center;}
+.case-v2-visual-caption {position:absolute;right:22px;bottom:-7px;background:#202024;color:#fff;font:700 .69rem 'Plus Jakarta Sans',sans-serif;letter-spacing:.12em;padding:11px 14px;border-radius:5px;}
+.case-v2-visual-caption b {font-size:1rem;margin-left:7px;}
+.case-v2-client {background:#fff;border-bottom:1px solid #e9e6e1;}
+.case-v2-client-inner {display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:78px;padding-top:48px;padding-bottom:51px;align-items:center;}
+.case-v2-client-heading {border-left:4px solid var(--orange);padding-left:26px;}
+.case-v2-client-heading .case-step {margin-bottom:11px;}
+.case-v2-client-heading h2 {font-size:clamp(1.4rem,2.2vw,1.9rem);margin:0 0 9px;line-height:1.4;}
+.case-v2-client-heading h2 small {font-size:.64em;}
+.case-v2-client-heading p {font-size:.85rem;line-height:1.8;margin:0;color:#66616a;}
+.case-v2-client-facts {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 28px;margin:0;}
+.case-v2-client-facts>div {border-bottom:1px solid #e9e6e1;padding-bottom:15px;min-width:0;}
+.case-v2-client-facts dt {font:800 .68rem 'Plus Jakarta Sans',sans-serif;letter-spacing:.1em;color:#888;margin-bottom:7px;}
+.case-v2-client-facts dd {font-size:.88rem;font-weight:700;margin:0;line-height:1.7;}
+.case-v2-client-facts dd a {color:#d94b0a;text-decoration:underline;text-decoration-color:#f6b597;text-underline-offset:4px;overflow-wrap:anywhere;}
+.case-v2-client-facts dd a span {display:inline-block;margin-left:6px;}
+.case-v2-summary {padding:96px 0 108px;background:#f6f4f0;}
+.case-v2-section-label {margin-bottom:34px;}
+.case-v2-section-label .case-step {margin-bottom:12px;}
+.case-v2-section-label h2 {font-size:clamp(1.7rem,2.8vw,2.45rem);line-height:1.45;margin:0;}
+.case-v2-summary-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;}
+.case-v2-summary-card {background:white;border-radius:12px;padding:35px 29px;border:1px solid #e9e4dd;}
+.case-v2-summary-card>span {font:800 .71rem 'Plus Jakarta Sans',sans-serif;color:var(--orange);letter-spacing:.12em;}
+.case-v2-summary-card h3 {font-size:1.27rem;line-height:1.5;margin:21px 0 13px;}
+.case-v2-summary-card p {font-size:.91rem;line-height:1.85;color:#57555a;margin:0;}
+.case-v2-story {background:#fff;padding:108px 0 125px;}
+.case-v2-story-lead {max-width:710px;margin:0 0 68px;}
+.case-v2-story-lead .case-step {margin-bottom:13px;}
+.case-v2-story-lead h2 {font-size:clamp(1.8rem,2.8vw,2.55rem);line-height:1.45;margin:0 0 17px;}
+.case-v2-story-lead p {font-size:.99rem;line-height:1.9;color:#57555a;}
+.case-v2-story-row {display:grid;grid-template-columns:215px minmax(0,1fr);gap:62px;border-top:1px solid #e6e1dc;padding:64px 0 71px;scroll-margin-top:100px;}
+.case-v2-story-row:last-child {border-bottom:1px solid #e6e1dc;}
+.case-v2-story-label span {display:block;font:800 clamp(3.9rem,6vw,6rem) 'Plus Jakarta Sans',sans-serif;color:#f5e6db;line-height:1;margin-bottom:14px;}
+.case-v2-story-label p {font:800 .77rem 'Plus Jakarta Sans',sans-serif;color:var(--orange);letter-spacing:.12em;margin:0;}
+.case-v2-story-content h3 {font-size:clamp(1.5rem,2.1vw,2.02rem);line-height:1.55;margin:0 0 27px;}
+.case-v2-story-content>p {font-size:.98rem;line-height:2.08;color:#3f3c3b;margin:0 0 23px;max-width:800px;}
+.case-v2-highlight {background:#fff4ec;padding:28px 34px;border-radius:9px;margin:39px 0 0;}
+.case-v2-highlight span {display:block;font:800 .68rem 'Plus Jakarta Sans',sans-serif;color:var(--orange);letter-spacing:.1em;margin-bottom:14px;}
+.case-v2-highlight strong {font-size:1.25rem;line-height:1.7;}
+.case-v2-feature-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:34px 0 0;}
+.case-v2-feature-grid>div {border:1px solid #e9e4dc;background:#fcfaf7;padding:22px 18px;border-radius:7px;}
+.case-v2-feature-grid span {display:block;color:var(--orange);font:800 1.6rem 'Plus Jakarta Sans',sans-serif;margin-bottom:15px;}
+.case-v2-feature-grid strong {display:block;font-size:.95rem;margin-bottom:11px;}
+.case-v2-feature-grid p {font-size:.82rem;line-height:1.8;color:#555;margin:0;}
+@media(max-width:980px){.case-v2-hero-grid {grid-template-columns:minmax(0,1fr) minmax(280px,.85fr);gap:28px;}.case-v2-heading h1 {font-size:clamp(1.7rem,2.8vw,2.3rem);}.case-v2-client-inner{gap:35px;}.case-v2-story-row {grid-template-columns:150px minmax(0,1fr);gap:38px;}}
+@media(max-width:760px){.case-v2 .case-v2-hero{padding:61px 0 77px;}.case-v2-hero-grid,.case-v2-client-inner,.case-v2-story-row {grid-template-columns:1fr;gap:30px;}.case-v2-heading h1 {font-size:clamp(1.75rem,5.1vw,2.55rem);}.case-v2-desktop {display:none;}.case-v2-visual{max-width:470px;margin:0 auto;}.case-v2-client-inner{padding-top:37px;padding-bottom:43px;}.case-v2-summary{padding:69px 0 81px;}.case-v2-summary-grid{grid-template-columns:1fr;gap:12px;}.case-v2-summary-card{padding:25px;}.case-v2-story{padding:72px 0 90px;}.case-v2-story-lead{margin-bottom:44px;}.case-v2-story-row{padding:45px 0 51px;gap:16px;}.case-v2-story-label{display:flex;align-items:center;gap:18px;}.case-v2-story-label span{font-size:3.5rem;margin:0;}.case-v2-feature-grid{grid-template-columns:1fr;gap:10px;}}
+@media(max-width:480px){.case-v2-client-facts {grid-template-columns:1fr;}.case-v2-visual{padding:0 10px 23px;}.case-v2-frame-viewport{aspect-ratio:1/1;}}
