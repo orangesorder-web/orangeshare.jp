@@ -1412,3 +1412,19 @@ body:not(.page-home) .site-header.is-scrolled .brand-logotype,
 .case-site-photo-nagata{max-width:400px;}
 .case-site-photo-nagata img{aspect-ratio:4/3;object-fit:cover;}
 @media(max-width:760px){.case-site-photo{max-width:100%;}.case-site-photo-nagata{max-width:min(100%,360px);}}
+
+/* ATTIC case screenshot: food-focused capture, complete masthead and hero */
+.case-attic .case-attic-frame-viewport{
+  aspect-ratio:985 / 431;
+  background:#fff;
+}
+.case-attic .case-attic-frame-viewport img{
+  width:100%;height:100%;object-fit:contain;object-position:center;
+}
+.case-spotlight-attic .case-spotlight-img{aspect-ratio:985 / 431;background:#fff;}
+.case-spotlight-attic .case-spotlight-img img{width:100%;height:100%;object-fit:contain;object-position:center;}
+.m-card:has(img[src="images/work-attic-food.webp"]) .m-img{background:#fff;}
+.m-card img[src="images/work-attic-food.webp"]{object-fit:contain;object-position:center;}
+.case-attic-about-photo{max-width:470px;}
+.case-attic-about-photo img{height:auto;max-height:360px;object-fit:contain;object-position:center;}
+@media(max-width:760px){.case-attic-about-photo{max-width:100%;}}
