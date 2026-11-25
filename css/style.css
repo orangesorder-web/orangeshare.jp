@@ -1428,3 +1428,9 @@ body:not(.page-home) .site-header.is-scrolled .brand-logotype,
 .case-attic-about-photo{max-width:470px;}
 .case-attic-about-photo img{height:auto;max-height:360px;object-fit:contain;object-position:center;}
 @media(max-width:760px){.case-attic-about-photo{max-width:100%;}}
+
+/* Nagata: show the full width of the precision metalworking hands photograph */
+.case-site-photo-nagata{max-width:min(100%,720px);margin:35px 0 12px;}
+.case-site-photo-nagata img{display:block;width:100%;height:auto;aspect-ratio:1000/313;object-fit:contain;object-position:center;border-radius:9px;}
+.case-site-photo-nagata figcaption{line-height:1.8;}
+@media(max-width:768px){.case-site-photo-nagata{max-width:100%;}}
